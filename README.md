@@ -25,15 +25,24 @@ Logistic Regression models are trained using the same process as the Linear Regr
   a. Logistic Regression models use Log Loss  as the loss function instead of Squared loss.
   b. Applying Regularization is critcal to avoid overfitting.
 
+Note: 
+
+a. If you used squared loss to calculate errors for the sigmoid function, as the output got closer and closer to 0 and 1, you would need more memory to preserve the precision 
+      needed to track these values.
+
+b. 
+
 Log loss:
 ---------
 a. In the Linear regression module, you used squared loss (also called L2 loss) as the loss function. Squared loss works well for a linear model where the rate of change of the 
    output values is constant. 
 b. However, the rate of change of a logistic regression model is not constant. The sigmoid curve is s-shaped and is not linear. When the log-odds (z) value is closer to 0, small 
-  increases in result in much larger changes to y than when z is a large positive or negative number. If you used squared loss to calculate errors for the sigmoid function, as 
-  the output got closer and closer   to 0 and 1, you would need more memory to preserve the precision needed to track these values.
-  So the loss function for the logistic regression is Log loss. The Log Loss equation returns the logarithm of the magnitude of the change, rather than just the distance from 
-  data to prediction.
+   increases in result in much larger changes to y than when z is a large positive or negative number. If you used squared loss to calculate errors for the sigmoid function, as 
+   the output got closer and closer   to 0 and 1, you would need more memory to preserve the precision needed to track these values.
+   So the loss function for the logistic regression is Log loss. The Log Loss equation returns the logarithm of the magnitude of the change, rather than just the distance from 
+   data to prediction.
+c. Instead, the loss function for logistic regression is Log Loss. The Log Loss equation returns the logarithm of the magnitude of the change, rather than just the distance from 
+   data to prediction. 
   For formula see the link:   https://developers.google.com/machine-learning/crash-course/logistic-regression/loss-regularization
 
 Regularization in logistic regression:
